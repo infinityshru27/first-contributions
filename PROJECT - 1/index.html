@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PortFolio</title>
+    <link href="stylesheet" href="loco.css"/>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="minicircle"></div>
+    <div id="main">
+      <div id="hero">
+        <div id="nav">
+          <a href="#">Cyntia</a>
+          <h2>MENU+</h2>
+          
+        </div>
+        <div id="heading">
+          <div class="bounding">
+            <h1 class="boundingelem">WEB</h1>
+          </div>
+         
+          <div class="blocktext">
+            <div class="bounding">
+              <h1 class="boundingelem" id="secondh1">Designer</h1>
+              
+            </div>
+            <div class="bounding">
+              <h5 class="boundingelem">Engineering Student</h5>
+            </div>
+            
+            
+          </div>
+          <div id="chhotiheadings">
+            <div class="bounding"> 
+              <h5 class="boundingelem">avialable for freelance</h5>
+
+            </div>
+            <div class="bounding">
+              <h5 class="boundingelem">work from may 23</h5>
+            </div>
+           
+            
+          </div>
+          <div id="herofooter">
+            <a href="#"
+              >Currently in second year <i class="ri-arrow-right-up-fill"></i
+            ></a>
+            <a href="#">Learner</a>
+            <div id="iconset">
+              <div class="circle"><i class="ri-arrow-down-fill"></i></div>
+              <div class="circle"><i class="ri-arrow-down-fill"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="second">
+        <div class="elem">
+          <img src="./plug.png" alt="" />
+          <h1>Projects</h1>
+          <h5>2022</h5>
+        </div>
+        <div class="elem">
+          <img src="./Ixperience.png" alt="" />
+          <h1>EXPERIENCE</h1>
+          <h5>2022</h5>
+        </div>
+        <div class="elem elemlast">
+          <img src="./plug.png" alt="" />
+          <h1>EDUCATION</h1>
+          <h5>2022</h5>
+        </div>
+      </div>
+      <div id="about">
+        <img src="./about.png" alt="" />
+
+        <div id="textabout">
+          <h5>(About Me)</h5>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+            officiis aut expedita nejfhjvndvbdvb bfjfh blanditiis obcaecati soluta quasi perferendis
+            explicabo iusto jkewfhgfhe jehfjkefasperiores.
+          </p>
+          <a href="">lets talk</a>
+        </div>
+        
+      </div>
+      <div id="subscribe">
+        <h5>(forgot to mention)</h5>
+        <h3>subscribe to my youtube channel<i class="ri-arrow-down-fill"></i></h3>
+    </div>
+    <div id="footer">
+        <div id="footerleft">
+            <h5>2024 & copyright</h5>
+            <h5>0.05 AM EST</h5>
+
+        </div>
+        <div id="footerright">
+            <a href="#" >Facebook</a>
+            <a href="#">instagram</a>
+            <a href="#">Linkedin</a>
+            <a href="#">twitter</a>
+
+        </div>
+    </div>
+    </div>
+    <script>
+      function firstPageAnime() {
+          var tl = gsap.timeline();
+          tl.from("#nav", {
+              y: '-10',
+              opacity: 0,
+              duration: 2,
+              ease: "expo.inOut" 
+          })
+          .to(".boundingelem", {
+              y: '0',
+              Delay:-1,
+              duration: 2,
+              ease: "expo.inOut" ,
+              stagger:.2
+          })
+          .from("#herofooter",{
+              y:-10,
+              opacity:0,
+              delay:-1,
+              duration:1.5,
+              ease:Expo.easeInOut
+            
+          })
+      }
+
+      document.addEventListener("DOMContentLoaded", function() {
+          firstPageAnime();
+      });
+      document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll(".elem").forEach(function (elem) {
+                elem.addEventListener("mousemove", function(details) {
+                    gsap.to(elem.querySelector("img"),{
+                      opacity:1,
+                      ease:Power1
+                    })
+                });
+            });
+        });
+  </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
